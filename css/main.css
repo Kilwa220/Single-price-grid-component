@@ -1,0 +1,185 @@
+@import url("https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap");
+
+/* START GLOBALE VARIABLE */
+:root {
+  --clr-cyan: hsl(179, 62%, 43%);
+  --clr-bright-yellow: hsl(71, 73%, 54%);
+  --light-gray: hsl(204, 43%, 93%);
+  --grayish-blue: hsl(218, 22%, 67%);
+}
+/* END GLOBALE VARIABLE */
+
+/* START COMPENANTE */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+
+@media (min-width: 992px) {
+  .container {
+    width: 975px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+
+p {
+  line-height: 1.5;
+}
+
+a {
+  text-decoration: none;
+}
+/* END COMPENANTE */
+
+/* START BODY */
+body {
+  font-family: "Karla", sans-serif;
+  background-color: var(--light-gray);
+}
+
+/* END BODY */
+
+/* START MAIN */
+main {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  padding: 0 15px;
+}
+
+main .container {
+  display: flex;
+  flex-direction: column;
+  width: 600px;
+  max-width: 100%;
+  box-shadow: 0px 0px 7px 3px #dfdfdf;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+main .container h2 {
+  color: white;
+  font-size: 20px;
+  margin-bottom: 15px;
+}
+
+main .container p {
+  color: #314a4b;
+}
+
+main .container .top-part {
+  padding: 30px;
+  background-color: white;
+  border-radius: 7px 7px 0 0;
+}
+
+main .top-part h1 {
+  color: var(--clr-cyan);
+  font-size: 1.4rem;
+}
+
+main .top-part h2 {
+  color: var(--clr-bright-yellow);
+  font-size: 18px;
+}
+
+main .top-part p {
+  color: var(--grayish-blue);
+}
+
+main .bottom-part {
+  display: flex;
+  flex-direction: column;
+}
+
+@media (min-width: 768px) {
+  main .bottom-part {
+    flex-direction: row;
+  }
+}
+
+@media (min-width: 768px) {
+  main .bottom-part .box {
+    width: 50%;
+  }
+}
+
+main .bottom-part .box:first-child {
+  background-color: var(--clr-cyan);
+  padding: 30px;
+}
+
+@media (min-width: 768px) {
+  main .bottom-part .box:first-child {
+    border-bottom-left-radius: 7px;
+  }
+}
+
+main .bottom-part .box:first-child p:first-of-type {
+  font-size: 30px;
+  color: white;
+}
+
+main .bottom-part span {
+  font-size: 16px;
+  vertical-align: middle;
+  position: relative;
+  top: -3px;
+  color: #343232;
+  margin-left: 5px;
+}
+
+main .bottom-part a {
+  display: block;
+  text-align: center;
+  padding: 10px;
+  background-image: linear-gradient(
+    to left,
+    var(--clr-bright-yellow) 50%,
+    white 50%
+  );
+  background-size: 200% 100%;
+  background-position: right bottom;
+  border-radius: 5px;
+  color: white;
+  margin-top: 20px;
+  transition: background-position 0.5s, color 0.5s 0.1s;
+}
+
+main .bottom-part a:hover {
+  color: var(--clr-bright-yellow);
+  background-position: left bottom;
+}
+
+main .bottom-part .box:last-child {
+  background-color: hsla(178.7, 61.8%, 43.1%, 0.69);
+  padding: 30px 100px 30px 30px;
+  border-radius: 0 0 7px 7px;
+}
+
+@media (min-width: 768px) {
+  main .bottom-part .box:last-child {
+    padding: 30px;
+    border-radius: 0 0 7px 0;
+  }
+}
+
+/* END MAIN */
